@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); $cpt++;
-						$tpl = ($cpt == 1) ? 'first' : get_post_format() ;
+					$tpl = ( ($cpt == 1) && !is_paged() ) ? 'first' : get_post_format() ;
 		 ?>
 			<?php get_template_part( 'template-parts/content',  $tpl); ?>
 		<?php endwhile; ?>
