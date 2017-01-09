@@ -10,7 +10,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry wow slideInLeft'); ?>>
 	<div class="meta">
 		<?php the_category(", "); ?>
 		<?php the_date(); ?>
