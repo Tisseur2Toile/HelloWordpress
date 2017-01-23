@@ -59,7 +59,7 @@ class WP_Nav_Menu_Widget extends WP_Widget {
 			'fallback_cb' => '',
 			'menu'        => $nav_menu
 		);
-
+		
 		/**
 		 * Filters the arguments for the Custom Menu widget.
 		 *
