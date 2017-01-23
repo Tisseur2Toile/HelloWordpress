@@ -8,9 +8,10 @@
  * @since FoundationPress 1.0.0
  */
 
+$fond = get_post_meta($post->ID, 'fond', true);
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry wow slideInLeft'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry wow slideInLeft'); ?> style="background: <?php echo $fond; ?>">
 	<div class="meta">
 		<?php the_category(", "); ?>
 		<?php the_date(); ?>

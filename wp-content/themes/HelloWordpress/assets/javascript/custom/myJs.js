@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  /*$('#footer ul.menu').addClass('vertical');*/
+  console.log($('.thumbnail')); //$('#footer ul.menu').addClass('vertical');*/
 
 
 });
