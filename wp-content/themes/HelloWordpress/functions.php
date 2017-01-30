@@ -83,3 +83,26 @@ function my_menu($var1)
   return $var1;
 }
 add_filter('widget_nav_menu_args', 'my_menu', 1, 1);
+
+
+function affichage_diaporama($id)
+{
+      // Balisage pour avoir une ligne responsive d'images
+        $html = '<div class="row collapse hide-for-small-only medium-up-4 large-up-7">';
+
+      // Récupération des images de la galerie
+        $images_galeries = get_post_gallery_images($id);
+
+      // Pour chaque item du tableau, on update le HTML
+        foreach($images_galeries as $image)
+        {
+          $html .= '<div class="column"><img src="'.$image.'" class="thumbnail" alt=""></div>';
+        }
+
+      // Ici on ferme la rangée...
+        $html .= '</div>';
+
+        echo $html;
+}
+
+add_action('avant_le_contenu_de_larticle', 'affichage_diaporama');

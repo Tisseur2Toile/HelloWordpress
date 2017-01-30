@@ -24,15 +24,9 @@
 
 
 	<div class="entry-content">
-		<?php do_action('my_gallery'); ?>
-		<?php $gal = get_post_gallery($post->ID, false);
-				foreach($gal['src'] as $v)
-				{
-				?>
-					<img src="jkdhsqjkhdjkh" alt="">
-				<?php
-				}
-				?>
+
+		<?php do_action('avant_le_contenu_de_larticle', $post->ID); ?>
+
 
 
 

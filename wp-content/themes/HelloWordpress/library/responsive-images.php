@@ -16,6 +16,8 @@ add_image_size( 'featured-medium', 1280, 400, true );
 add_image_size( 'featured-large', 1440, 400, true );
 add_image_size( 'featured-xlarge', 1920, 400, true );
 
+
+add_image_size( 'diaporama', 120, 90, true );
 add_image_size( 'listing-large', 556, 153, true );
 
 // Add additional image sizes
@@ -27,6 +29,7 @@ add_image_size( 'fp-xlarge', 1920 );
 // Register the new image sizes for use in the add media modal in wp-admin
 function foundationpress_custom_sizes( $sizes ) {
 	return array_merge( $sizes, array(
+		'diaporama'	=> __( 'Diaporama Accueil' ),
 		'fp-small'  => __( 'FP Small' ),
 		'fp-medium' => __( 'FP Medium' ),
 		'fp-large'  => __( 'FP Large' ),
