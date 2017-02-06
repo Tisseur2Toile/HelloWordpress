@@ -7,6 +7,9 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
+ $fond = get_post_meta($post->ID, 'fond', true);
+ $prix = get_post_meta($post->ID, 'Prix', true);
+ var_dump($prix);
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
@@ -31,6 +34,7 @@
 
 
 		<?php the_excerpt(); ?>
+		<?php echo $prix; ?>
 		<a href="<?php the_permalink(); ?>">Lire la suite...</a>
 	</div>
 	<footer>
